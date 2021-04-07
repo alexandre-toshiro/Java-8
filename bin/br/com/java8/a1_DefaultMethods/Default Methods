@@ -1,0 +1,14 @@
+Default Methods
+Para evitar essa quebra, o Java 8 optou por criar um novo recurso que possibilitasse adicionar métodos em interfaces e implementá-los ali mesmo! 
+Se você abrir o código fonte da interface List, verá esse método:
+
+    default void sort(Comparator<? super E> c) {
+        Collections.sort(this, c);
+    }
+    
+É um default method! Um método de interface que você não precisa implementar na sua classe se não quiser, pois você terá já essa implementação default.
+ Repare que ele simplesmente delega a invocação para o bom e velho Collections.sort, mas veremos que outros métodos fazem muito mais.
+
+Default methods foi uma forma que o Java encontrou para evoluir interfaces antigas, sem gerar incompatibilidades. Não é uma novidade da linguagem:
+ Scala, C# e outras possuem recursos similares e até mais poderosos. E repare que é diferente de uma classe abstrata: em uma interface você não pode ter atributos 
+ de instância, apenas esses métodos que delegam chamadas ou trabalham com os próprios métodos da interface.
