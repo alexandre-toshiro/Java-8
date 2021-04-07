@@ -12,3 +12,5 @@ Se você abrir o código fonte da interface List, verá esse método:
 Default methods foi uma forma que o Java encontrou para evoluir interfaces antigas, sem gerar incompatibilidades. Não é uma novidade da linguagem:
  Scala, C# e outras possuem recursos similares e até mais poderosos. E repare que é diferente de uma classe abstrata: em uma interface você não pode ter atributos 
  de instância, apenas esses métodos que delegam chamadas ou trabalham com os próprios métodos da interface.
+ 
+ A partir desse métodos default, foi possível evoluir as interfaces sem quebrar a compatibilidade.
